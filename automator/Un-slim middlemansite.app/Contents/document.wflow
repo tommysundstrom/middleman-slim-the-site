@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>381</string>
+	<key>AMApplicationVersion</key>
+	<string>2.4</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>fileNames</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<key>ActionName</key>
+				<string>Get Specified Finder Items</string>
+				<key>ActionNameComment</key>
+				<string>Middleman site directory</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array>
+						<string>~/Desktop</string>
+					</array>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.SpecifiedFiles</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>SpecifiedFilesAction</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>C3688E56-9C1E-418D-8B2D-63098058AF04</string>
+				<key>Keywords</key>
+				<array>
+					<string>File</string>
+					<string>Choose</string>
+					<string>Find</string>
+					<string>Get</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>C5385E8D-75E5-4055-89E5-51DBD743A47A</string>
+				<key>UUID</key>
+				<string>B30F1881-43E1-471A-82C7-3592157271D5</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>599.250000:537.500000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
+				<key>ActionName</key>
+				<string>Run Shell Script</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string># encoding: UTF-8
+
+# This is a companion script to slim.rb. It will put back the files that was removed (without overwriting changes
+# that has been made).
+
+require 'pathname'
+require 'fileutils'
+require 'logger'
+
+# Setup logging
+logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/unslimmer.log')
+FileUtils.mkdir_p(File.dirname(logpath))
+$LOG = Logger.new(logpath, 'daily')
+$LOG.level = Logger::INFO
+$LOG.info '---------------------------------------------------------------'
+$LOG.info 'STARTING UN-SLIM'
+
+# Handle input from automator
+input = []
+ARGF.each do |f|
+  input &lt;&lt; f
+end
+
+Site = Pathname.new(input[0].strip)
+$LOG.debug "Site: #{Site}"
+Source  = Site + 'source'
+$LOG.debug "Source: #{Source}"
+Archive = Site + 'source_unslimmed_copy'     # Name of a temporary copy of the sites source directory
+WARNING = Source + '_WARNING - This site is slimmed for development.lock'   # This is the name of a file created
+# just to mark that the site has been slimmed down. It is used to avoid slimming the site twice by mistake,
+# and to prevent the site from being built while slimmed.
+#    If you change this name, change it also in the `before` block in your config.rb file (see below) and
+#    in the slim script.
+
+
+# Check that there is anything to put back
+raise 'Can not find a copy of the original site source. (Maybe the site is not slimmed?)' unless Archive.exist?
+
+# Put it back
+
+FileUtils.cd(Archive.to_s)
+bring_back = Dir.glob('**/*').select { |fd| File.file?(fd) }    # All files
+
+# Check that all directories are in place. (Since I did not remove any directories during slimming, they should be.
+# If they are not it may be a sign that I've reorganized the site or something like that, and in that case I want
+# a warning now, before starting to move things back to their old places. Thus, no mkdir here.)
+bring_back.each do |local_path|
+  raise "Directory #{(Source + local_path).dirname} does not seam to exist (needed by #{local_path}" unless ((Source + local_path).dirname).exist?
+end
+
+# Move the files back – unless there already is a file at that location (existing file are
+# assumed to be the same or a newer version)
+bring_back.each do |local_path|
+  if (Source + local_path).exist?
+    # There is already a (identical or newer) file there. Throw this one away.
+    FileUtils.rm((Archive + local_path).to_s)
+    $LOG.info "#{local_path} already exist."
+  else
+    # Move it
+    FileUtils.mv((Archive + local_path).to_s, (Source + local_path).to_s)
+    $LOG.debug "Bringing back: #{local_path}"
+  end
+end
+
+# Remove the archive directory
+raise "There are still files here" unless (Dir.glob('**/*').select { |fd| File.file?(fd) }).empty?
+FileUtils.rm_r(Archive.to_s)
+$LOG.debug "Removed the empty #{Archive.to_s}"
+
+# Remove lock
+FileUtils.rm (Source + WARNING).to_s
+$LOG.debug "Removed the warning"
+
+
+</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>0</integer>
+					<key>shell</key>
+					<string>/usr/bin/ruby</string>
+					<key>source</key>
+					<string></string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.RunShellScript</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.3</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunShellScriptAction</string>
+				<key>InputUUID</key>
+				<string>3DE20081-1BED-4E80-859E-2CB6094E3AC5</string>
+				<key>Keywords</key>
+				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Command</string>
+					<string>Run</string>
+					<string>Unix</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>67F8CE0C-9BE6-4EA2-A43F-583260ECE33A</string>
+				<key>UUID</key>
+				<string>5F1E6CA0-F6A6-444C-A73D-666A131705D8</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>inputMethod</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>599.250000:299.500000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>70A06B4C-4389-4277-900A-F44FA6D25929</key>
+		<dict>
+			<key>from</key>
+			<string>B30F1881-43E1-471A-82C7-3592157271D5 - B30F1881-43E1-471A-82C7-3592157271D5</string>
+			<key>to</key>
+			<string>5F1E6CA0-F6A6-444C-A73D-666A131705D8 - 5F1E6CA0-F6A6-444C-A73D-666A131705D8</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>

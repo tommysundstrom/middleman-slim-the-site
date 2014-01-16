@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>381</string>
+	<key>AMApplicationVersion</key>
+	<string>2.4</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>fileNames</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<key>ActionName</key>
+				<string>Get Specified Finder Items</string>
+				<key>ActionNameComment</key>
+				<string>Middleman site directory</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array>
+						<string>~/Desktop</string>
+					</array>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.SpecifiedFiles</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>SpecifiedFilesAction</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>F3439966-80E4-49B1-A6E3-B6DC6E7E9D5F</string>
+				<key>Keywords</key>
+				<array>
+					<string>File</string>
+					<string>Choose</string>
+					<string>Find</string>
+					<string>Get</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>F48E2278-48C3-4CC1-8779-C2421465E1C0</string>
+				<key>UUID</key>
+				<string>37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>494.750000:988.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<false/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>8EDC2374-6E8E-49DC-B9CC-206C958CD1F8</string>
+						<key>variableUUIDsInMenu</key>
+						<array/>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Set Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>Set Value of Variable</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>8EDC2374-6E8E-49DC-B9CC-206C958CD1F8</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Set_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Set_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>AC303863-AF91-43AA-8F1C-195E493302DA</string>
+				<key>Keywords</key>
+				<array>
+					<string>variable</string>
+					<string>binding</string>
+					<string>input</string>
+					<string>output</string>
+					<string>storage</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>B9DD8C68-52C7-4CB9-8EA5-145FDCF7173E</string>
+				<key>UUID</key>
+				<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>494.750000:750.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.1.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>itemType</key>
+					<dict/>
+					<key>predicate</key>
+					<dict/>
+					<key>searchPath</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<true/>
+						<key>variableUUIDsInMenu</key>
+						<array>
+							<string>2A82AB7C-281B-437A-83E9-C2D224AC9BA5</string>
+						</array>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>AMSelectedInputType</key>
+				<string>com.apple.cocoa.path</string>
+				<key>AMSelectedOutputType</key>
+				<string>com.apple.cocoa.path</string>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Find Finder Items 2.action</string>
+				<key>ActionName</key>
+				<string>Find Finder Items</string>
+				<key>ActionNameComment</key>
+				<string>Files &amp; folders that should be protected</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>itemType</key>
+					<string>com.apple.cocoa.path</string>
+					<key>predicate</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGb3BYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oK8QFgcIDxQcJicqMjY7PEFFS1BRVl5jaGpV
+					JG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFBy
+					ZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0
+					ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2Jq
+					ZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmln
+					aHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVz
+					c2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KA
+					E4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFu
+					ZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVz
+					c2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOA
+					CIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9Ir
+					LC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBO
+					U1NlbGZFeHByZXNzaW9uoy8wMV8QEE5TU2Vs
+					ZkV4cHJlc3Npb25cTlNFeHByZXNzaW9uWE5T
+					T2JqZWN00hALMzWhNIAJgAzTCx83ODk6WU5T
+					S2V5UGF0aIALEAqAClVsYWJlbNIrLD0+XxAc
+					TlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lv
+					bqM/QDFfEBxOU0tleVBhdGhTcGVjaWZpZXJF
+					eHByZXNzaW9uXE5TRXhwcmVzc2lvbtIrLEJD
+					Xk5TTXV0YWJsZUFycmF5o0JEMVdOU0FycmF5
+					0issRkdfEBNOU0tleVBhdGhFeHByZXNzaW9u
+					pEhJSjFfEBNOU0tleVBhdGhFeHByZXNzaW9u
+					XxAUTlNGdW5jdGlvbkV4cHJlc3Npb25cTlNF
+					eHByZXNzaW9u00wfC01OT18QD05TQ29uc3Rh
+					bnRWYWx1ZYAPEACAEBBA0issUlNfEBlOU0Nv
+					bnN0YW50VmFsdWVFeHByZXNzaW9uo1RVMV8Q
+					GU5TQ29uc3RhbnRWYWx1ZUV4cHJlc3Npb25c
+					TlNFeHByZXNzaW9u1QtXWFlaW05cTl1aTlNN
+					b2RpZmllclhOU05lZ2F0ZVlOU09wdGlvbnNe
+					TlNPcGVyYXRvclR5cGWAEggQBNIrLF9gXxAb
+					TlNFcXVhbGl0eVByZWRpY2F0ZU9wZXJhdG9y
+					o2FiMV8QG05TRXF1YWxpdHlQcmVkaWNhdGVP
+					cGVyYXRvcl8QE05TUHJlZGljYXRlT3BlcmF0
+					b3LSKyxkZV8QFU5TQ29tcGFyaXNvblByZWRp
+					Y2F0ZaNmZzFfEBVOU0NvbXBhcmlzb25QcmVk
+					aWNhdGVbTlNQcmVkaWNhdGXSKyxEaaJEMdIr
+					LGtsXxATTlNDb21wb3VuZFByZWRpY2F0ZaNt
+					bjFfEBNOU0NvbXBvdW5kUHJlZGljYXRlW05T
+					UHJlZGljYXRlXxAPTlNLZXllZEFyY2hpdmVy
+					0XFyVHJvb3SAAQAIABEAGgAjAC0AMgA3AFAA
+					VgBdAHcAiQCQAJIAlACWAJsApgCoAKoArAC1
+					AMkA3ADyAPQA9gD4APoBBQEPAR4BMQE9AT8B
+					QQFDAUUBRwFUAVkBWwFdAWIBbQF2AYkBjQGg
+					Aa0BtgG7Ab0BvwHBAcgB0gHUAdYB2AHeAeMC
+					AgIGAiUCMgI3AkYCSgJSAlcCbQJyAogCnwKs
+					ArMCxQLHAskCywLNAtIC7gLyAw4DGwMmAzED
+					OgNEA1MDVQNWA1gDXQN7A38DnQOzA7gD0APU
+					A+wD+AP9BAAEBQQbBB8ENQRBBFMEVgRbAAAA
+					AAAAAgEAAAAAAAAAcwAAAAAAAAAAAAAAAAAA
+					BF0=
+					</data>
+					<key>searchPath</key>
+					<string>~/Sites/Middleman</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Find_Finder_Items_2</string>
+				<key>CFBundleVersion</key>
+				<string>2.1.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>Find_Finder_Items_2</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>2E005885-6C17-4A0D-A2EB-D0D97743ECAF</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>545874C1-4482-4C65-9CAE-24C6ADD16F24</string>
+				<key>UUID</key>
+				<string>CF5D4092-B6C2-4839-A905-370080922E35</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>com.apple.cocoa.path</string>
+						<key>name</key>
+						<string>itemType</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>searchPath</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<data>
+						</data>
+						<key>name</key>
+						<string>predicate</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>494.750000:708.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Find Finder Items 2.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>fileNames</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<key>ActionName</key>
+				<string>Get Specified Finder Items</string>
+				<key>ActionNameComment</key>
+				<string>Files &amp; folders that should be protected</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array/>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.SpecifiedFiles</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>SpecifiedFilesAction</string>
+				<key>InputUUID</key>
+				<string>861CFC17-9307-48D4-818B-BD92999D41E3</string>
+				<key>Keywords</key>
+				<array>
+					<string>File</string>
+					<string>Choose</string>
+					<string>Find</string>
+					<string>Get</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>71F65D9B-AB59-4846-B8CE-DDAA26113E09</string>
+				<key>UUID</key>
+				<string>10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>494.750000:483.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>v.1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>variableUUID</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<false/>
+						<key>selectedVariableUUID</key>
+						<string>8EDC2374-6E8E-49DC-B9CC-206C958CD1F8</string>
+						<key>variableUUIDsInMenu</key>
+						<array/>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action</string>
+				<key>ActionName</key>
+				<string>Get Value of Variable</string>
+				<key>ActionNameComment</key>
+				<string>Site directory – must always be last</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>variableUUID</key>
+					<string>8EDC2374-6E8E-49DC-B9CC-206C958CD1F8</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Value_of_Variable</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Get_Value_of_Variable</string>
+				<key>InputUUID</key>
+				<string>0A73F366-4397-4491-8A22-08C475E4705C</string>
+				<key>Keywords</key>
+				<array>
+					<string>variable</string>
+					<string>binding</string>
+					<string>input</string>
+					<string>output</string>
+					<string>storage</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>FD143B23-3927-4440-94FC-6954A82AA96A</string>
+				<key>UUID</key>
+				<string>7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>variableUUID</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>494.750000:245.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
+				<key>ActionName</key>
+				<string>Run Shell Script</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string># encoding: UTF-8
+
+# Middlemans development environment (starting up and live reloading) can become quite
+# slow if the site is large. This script will slim down the site to a minimum of pages,
+# making it much faster to work with. After development is done, a companion script can
+# un-slim it, replacing all the removed files again.
+#   Note that directly after slimming/un-slimming Middleman will have a lot of bookkeeping
+# to do handling the massive change of the site. Give it a few minutes, and it will soon
+# be back to normal.
+#
+# IMPORTANT  To do before running the script:
+#
+# * Copy the security script to your config.rb, to protect the site from being built when slimmed.
+#
+# * Open in automator and add the path to your site in the first 'Get Specified Finder Items'
+#   (It should point to the site directory (NOT the source folder).)
+#
+# * Optionally, add search conditions to 'Find Finder Items' (like protecting files with a certain label or
+#   files you've been working on today)
+#
+# * Optionally, add files you want be sure will not be removed (the script is semi-smart about
+#   what to keep and what to remove, but it has no sure way to identify template files used
+#   to build dynamic pages)
+
+
+# IMPORTANT! COPY THIS TO YOUR CONFIG.RB
+# Copy the block starting with `before do` and place it inside the `configure :build do` section
+# of your `config.rb` file (or create a new `configure :build do` if there is none).
+#   This will prevent the site from being built while being slimmed.
+#
+=begin
+configure :build do   # This is normally already in the config.rb file
+  before do           # Copy everything from and including this line...
+    if (Pathname.new(root) + source + '_WARNING - This site is slimmed for development.lock').exist?
+      raise 'WARNING The site is slimmed down to make development faster. Do not build!'
+    end
+  end                 # ...to and including this line.
+end
+=end
+
+
+# AUTOMATOR NOTES
+#
+# Steps
+#
+# The first step, 'Get Specified Finder Items', is where you point Automator to your site. It should point to the site
+# directory (NOT the source folder).
+#
+# 'Find Finder Items' This will search for files to protect. Can be quite powerful. Use for stuff like protecting
+# files with a label or files that you've been working on the last week.
+#    IMPORTANT While it will work if set to search the entire Computer, it will be much faster if you point it to
+# your source folder.
+#
+# If you want, you can add a 'Get Selected Finder Items'-step, for real quick protection.
+#
+# The second 'Get Specified Finder Items'. The script is semi-smart on what items to protect. But some stuff
+# is difficult to identify, like files that are used as templates for dynamic pages. Use this step
+# to manually set files and directories that should be protected.
+#
+
+
+require 'pathname'
+require 'fileutils'
+require 'logger'
+
+# Setup logging
+logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/slimmer.log')
+FileUtils.mkdir_p(File.dirname(logpath))
+$LOG = Logger.new(logpath, 'daily')
+$LOG.level = Logger::INFO
+$LOG.info '---------------------------------------------------------------'
+$LOG.info 'STARTING SLIM'
+
+# Handle input from automator
+input = []
+ARGF.each do |f|
+  input &lt;&lt; f
+end
+
+$LOG.debug 'input: ' + input.join(' | ')
+
+# Automator sometimes adds a little extra space in path. Clean it up.
+input = input.map { |path| path.strip }
+
+# Last item is the site directory. The rest is stuff that should be protected from being slimmed away.
+Site = Pathname.new(input.pop)
+$LOG.debug "Site: #{Site}"
+Source  = Site + 'source'
+$LOG.debug "Source: #{Source}"
+
+# Removing some unneeded stuff from input
+input.uniq!       # Removing any duplicates
+input = input - [Site.to_s, Source.to_s]    # The site or source folders can not be protected, since it
+      # would render this script pointless
+
+# Translating the absolute paths to local paths, and removing those that are not in the Source folder
+local_paths = []
+input.each do |absolute_path|
+  prefix = Source.to_s + '/'               #i.e. inside the source folder
+  if absolute_path.start_with?(prefix)     # Note that if it does not, it is not in the source dir and will not be included
+    local_paths &lt;&lt; absolute_path[prefix.length..-1]
+  end
+end
+
+Protected = local_paths
+$LOG.debug 'Protected: ' + Protected.join(' | ')
+
+=begin   # This code is left here for debugging (when running without automator)
+Site = Pathname.new(File.expand_path('~/Sites/Middleman/anvandbart.se'))   # Path to the site directory
+Source  = Site + 'source'
+Protected = [         # Add any files you want to protect from being removed.
+    # For example template files used by dynamic pages.
+    # Use paths relative to `source`, like 'blog/an_article.html.markdown'
+    'ab/anvandbarhet.html.erb',
+    'blogsource/strategiskdesign.html.haml'
+]
+=end
+
+
+Archive = Site + 'source_unslimmed_copy'            # Name of a temporary copy of the sites source directory
+WARNING = Source + '_WARNING - This site is slimmed for development.lock'   # This is the name of a file created
+      # just to mark that the site has been slimmed down. It is used to avoid slimming the site twice by mistake,
+      # and to prevent the site from being built while slimmed.
+      #    If you change this name, change it also in the `before` block in your config.rb file (see above) and
+      #    in the unslim script.
+
+
+# Start slimming the site
+FileUtils.cd(Source.to_s)
+
+# Check that the site is not already slimmed
+raise 'This site indicates that it is already in a slimmed state' if File.exist? WARNING
+
+# Make a complete copy of source
+FileUtils.copy_entry(Source, Archive)
+
+# Split Protected into two separate lists, for files and for directories
+protected_files = Protected.select { |fd| File.file?(fd) }
+$LOG.debug 'Protected files: ' + protected_files.join(' | ')
+protected_directories = Protected.select { |fd| File.directory?(fd) }
+$LOG.debug 'Protected directories: ' + protected_directories.join(' | ')
+
+
+# First, get all files that are candidates to be removed (i.e. files with `.html` in their names)
+remove_candidates = Dir.glob('**/*.html*').select { |fd| File.file?(fd) }  # This will just return files, no directories
+$LOG.debug 'First list of files that are to be removed: ' + remove_candidates.join(' | ')
+
+# Then identify those that are to be kept
+stay_candidates = Dir.glob('**/index.*')    # Any index file
+stay_candidates += protected_files          # Manually added at the beginning of this script
+$LOG.debug 'Index-files (not to be removed): ' + stay_candidates.join(' | ')
+
+# Only move those files that are not to stay
+remove_candidates = remove_candidates - stay_candidates
+
+# Some directories are protected, as are some markers in the file name, suffixes etc.
+remove_candidates = remove_candidates.reject do |local_path|
+  case local_path
+    when /^_|\/_/,      # If local path contains a directory or a file that starts with an underscore, don't touch it
+        /^\.|\/\./,     # If local path contains a directory or a file that starts with a dot, don't touch it
+        /^javascripts\/|\/javascripts\//,     # It should be rare that any of these three folder contains a
+        /^layouts\/|\/javascripts\//,         # file with .html in the name. But just to be sure.
+        /^stylesheets\/|\/javascripts\//,     #
+        /.html$/,       # IMPORTANT! I have found no way to reliably identify all templates for dynamic pages.
+                        # You will have to manually add them to the manual selection above. This will however
+                        # handle those that ends with .html
+        /.builder$/
+      true
+    else
+      false
+  end
+end
+
+# Protecting directories and making sure there are enough files in the others
+
+#     Put into hash, to be able to count the number of files in each directory
+remove_candidates_directories = {}
+remove_candidates.each do |local_path|
+  directory = File.dirname(local_path)
+  directory = :root if directory == ''
+  remove_candidates_directories[directory] = [] unless remove_candidates_directories.has_key?(directory)
+  remove_candidates_directories[directory] &lt;&lt; local_path
+end
+
+#     Protect some directories
+protected_directories.each do |local_path|
+  remove_candidates_directories.delete(local_path)
+end
+
+
+#     Then protect a number of items in each directory, before putting them back into remove_candidates
+remove_candidates = []
+remove_candidates_directories.each do |key, value|
+  # Always keep 15 files (or as many as are available if fewer) in a directory, plus index and other protected
+  # files. This to avoid making index pages, lists etc. empty.
+  remove_candidates += value - value.sample(14)   # Requires Ruby 1.9.1+. If earlier, this can be used instead:
+  # remove_candidates += value[15..-1]
+end
+
+# Remove!
+#     A 'lock'-file is created, to avoid slimming the site twice by mistake
+FileUtils.touch (WARNING).to_s
+FileUtils.rm remove_candidates
+$LOG.info 'Removed files: ' + remove_candidates.join(' | ')
+
+</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>0</integer>
+					<key>shell</key>
+					<string>/usr/bin/ruby</string>
+					<key>source</key>
+					<string></string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.RunShellScript</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.3</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunShellScriptAction</string>
+				<key>InputUUID</key>
+				<string>477C33F5-F5B0-4D8C-88DD-688CDF3C163D</string>
+				<key>Keywords</key>
+				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Command</string>
+					<string>Run</string>
+					<string>Unix</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>8C648E54-FEAE-4CD4-BD20-00EAC963847B</string>
+				<key>UUID</key>
+				<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>inputMethod</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>494.750000:203.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>1D4D7BC8-BF08-4666-9DA8-5504A109FA79</key>
+		<dict>
+			<key>from</key>
+			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
+			<key>to</key>
+			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+		</dict>
+		<key>99C78A30-48C8-46A3-AB97-4D278CF9BC35</key>
+		<dict>
+			<key>from</key>
+			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
+			<key>to</key>
+			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
+		</dict>
+		<key>A7D130E6-AC43-4BF3-8911-74A98C4EEE25</key>
+		<dict>
+			<key>from</key>
+			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+			<key>to</key>
+			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
+		</dict>
+		<key>D26A72AD-CD88-48B4-A53D-49A7E542AB6C</key>
+		<dict>
+			<key>from</key>
+			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
+			<key>to</key>
+			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
+		</dict>
+		<key>F9FEC88D-D4ED-48F6-B4C2-C11743E36FF0</key>
+		<dict>
+			<key>from</key>
+			<string>37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9 - 37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9</string>
+			<key>to</key>
+			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>8EDC2374-6E8E-49DC-B9CC-206C958CD1F8</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Storage</string>
+			<key>name</key>
+			<string>site</string>
+		</dict>
+		<dict>
+			<key>UUID</key>
+			<string>2A82AB7C-281B-437A-83E9-C2D224AC9BA5</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.Path</string>
+			<key>name</key>
+			<string>Path</string>
+			<key>value</key>
+			<string>~/Desktop</string>
+		</dict>
+	</array>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
