@@ -75,3 +75,9 @@ directories that should be protected.
 The second 'Get Specified Finder Items'. The script is semi-smart on what items to protect. But some stuff
 is difficult to identify, like files that are used as templates for dynamic pages. Use this step
 to manually set files and directories that should be protected.
+
+
+### Using this repository
+
+Note that everything you need from this repository is the two Automator files. The script files are copies of
+ the Ruby scripts inside the Automator files, so you just need them if you want to modify the functionality.
