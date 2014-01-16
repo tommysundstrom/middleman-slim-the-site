@@ -1,8 +1,6 @@
 middleman-slim-the-site
 =======================
 
-*** Not ready to be used yet (I'm working on how to make the automator files downloadable) ***
-
 Will temporarily move files out of a Middleman site, to make development faster.
 
 Developing in Middleman (esp. starting up and live reloading) can become quite
@@ -12,7 +10,7 @@ move the files back into the site again.
 
 The script is written to be used inside an Automator action on a Mac. In its present
 form, it will not run standalone (but it should be trivial to adapt it to that,
-if you for example prefer to run it from the command line).
+if you prefer to run it from the command line).
 
 There is an automator action to slim down the site, and another to un-slim it in this
 repository.
@@ -45,7 +43,7 @@ configure :build do   # This is normally already in the config.rb file
   before do           # Copy everything from and including this line...
     if File.exist? ( root + '/source' + '/_WARNING - This site is slimmed for development.lock')
       raise 'WARNING The site is slimmed down to make development faster. Do not build!'
-    end                 # ...to and including this line.
+    end               # ...to and including this line.
   end
 ```
 
@@ -54,8 +52,14 @@ If the Middleman server is running when you slim down or up the site, it will ha
 a lot of bookkeeping to handle the changes. Restart, or give it a while to catch up.
 
 
+### Automator files
 
-## Configuring the Automator action
+I'm uncertain how the Automator files will survive being pushed and pulled through git, so just to be sure
+there are also zipped versions of the same files. (If you manage to pull the Automator files, and they
+are ok, please tell me in the comments.)
+
+
+### Configuring the Automator action
 
 The first step, 'Get Specified Finder Items', is where you point Automator to your site. It should point to the site
 directory (NOT the source folder).
