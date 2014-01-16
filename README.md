@@ -1,6 +1,8 @@
 middleman-slim-the-site
 =======================
 
+*** Not ready to be used yet (I'm working on how to make the automator files downloadable) ***
+
 Will temporarily move files out of a Middleman site, to make development faster.
 
 Developing in Middleman (esp. starting up and live reloading) can become quite
@@ -38,7 +40,7 @@ Copy the block starting with `before do` and place it inside the `configure :bui
 of your `config.rb` file (or create a new `configure :build do` if there is none).
 This will prevent the site from being built while being slimmed down.
 
-```
+``
 configure :build do   # This is normally already in the config.rb file
   before do           # Copy everything from and including this line...
     if File.exist? ( root + '/source' + '/_WARNING - This site is slimmed for development.lock')
