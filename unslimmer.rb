@@ -8,7 +8,7 @@ require 'fileutils'
 require 'logger'
 
 # Setup logging
-logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/unslimmer.log')
+logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/slimmer.log')
 FileUtils.mkdir_p(File.dirname(logpath))
 $LOG = Logger.new(logpath, 'daily')
 $LOG.level = Logger::INFO
@@ -50,17 +50,24 @@ end
 
 # Move the files back – unless there already is a file at that location (existing file are
 # assumed to be the same or a newer version)
+brought_back = 0
+trashed = 0
 bring_back.each do |local_path|
   if (Source + local_path).exist?
     # There is already a (identical or newer) file there. Throw this one away.
     FileUtils.rm((Archive + local_path).to_s)
-    $LOG.info "#{local_path} already exist."
+    $LOG.debug "#{local_path} already exist."
+    trashed += 1
   else
     # Move it
     FileUtils.mv((Archive + local_path).to_s, (Source + local_path).to_s)
     $LOG.debug "Bringing back: #{local_path}"
+    brought_back += 1
   end
 end
+$LOG.info "#{brought_back + trashed} files handled"
+$LOG.info "#{trashed} files was already in place"
+$LOG.info "Moved back #{brought_back} files"
 
 # Remove the archive directory
 raise "There are still files here" unless (Dir.glob('**/*').select { |fd| File.file?(fd) }).empty?

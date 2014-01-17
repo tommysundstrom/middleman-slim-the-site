@@ -109,7 +109,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>494.750000:988.000000</string>
+				<string>311.250000:988.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -219,7 +219,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>494.750000:750.000000</string>
+				<string>311.250000:750.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -419,7 +419,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>494.750000:708.000000</string>
+				<string>311.250000:708.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Find Finder Items 2.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -521,7 +521,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>494.750000:483.000000</string>
+				<string>311.250000:483.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -633,7 +633,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>494.750000:245.000000</string>
+				<string>311.250000:245.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -763,21 +763,40 @@ $LOG.info '---------------------------------------------------------------'
 $LOG.info 'STARTING SLIM'
 
 # Handle input from automator
+
+# For debugging
+if ARGV.empty?
+  ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+end
+
+
 input = []
-ARGF.each do |f|
+ARGV.each do |f|
   input &lt;&lt; f
 end
 
 $LOG.debug 'input: ' + input.join(' | ')
 
 # Automator sometimes adds a little extra space in path. Clean it up.
-input = input.map { |path| path.strip }
+# Also convert input to UTF-8
+input = input.map do |path|
+  path.strip
+  path.encode('utf-8', 'iso-8859-1')  # from iso-8859-1 to utf-8   # Needs Ruby 2.0
+end
 
 # Last item is the site directory. The rest is stuff that should be protected from being slimmed away.
 Site = Pathname.new(input.pop)
 $LOG.debug "Site: #{Site}"
 Source  = Site + 'source'
 $LOG.debug "Source: #{Source}"
+
+# Logging files protected by Automator
+if input.empty?
+  $LOG.info "No files protected by Automator"
+else
+  input.each {|path| $LOG.info "Protected by Automator: #{path}" }
+  $LOG.info "#{input.count} files protected by Automator"
+end
 
 # Removing some unneeded stuff from input
 input.uniq!       # Removing any duplicates
@@ -892,7 +911,9 @@ end
 #     A 'lock'-file is created, to avoid slimming the site twice by mistake
 FileUtils.touch (WARNING).to_s
 FileUtils.rm remove_candidates
-$LOG.info 'Removed files: ' + remove_candidates.join(' | ')
+$LOG.debug 'Removed files: ' + remove_candidates.join(' | ')
+$LOG.info "Removed #{remove_candidates.count} files"
+
 
 </string>
 					<key>CheckedForUserDefaultShell</key>
@@ -1007,7 +1028,7 @@ $LOG.info 'Removed files: ' + remove_candidates.join(' | ')
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>494.750000:203.000000</string>
+				<string>311.250000:203.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -1017,35 +1038,35 @@ $LOG.info 'Removed files: ' + remove_candidates.join(' | ')
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>1D4D7BC8-BF08-4666-9DA8-5504A109FA79</key>
+		<key>58110BE5-B521-4F95-AFE4-570E199745C0</key>
 		<dict>
 			<key>from</key>
 			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
 			<key>to</key>
 			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
 		</dict>
-		<key>99C78A30-48C8-46A3-AB97-4D278CF9BC35</key>
+		<key>6522555B-7B22-4C24-BBDF-F689702662FB</key>
+		<dict>
+			<key>from</key>
+			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+			<key>to</key>
+			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
+		</dict>
+		<key>7FDAE4C9-05D5-4934-9E1A-A4251D6F2B7E</key>
 		<dict>
 			<key>from</key>
 			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
 			<key>to</key>
 			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
 		</dict>
-		<key>A7D130E6-AC43-4BF3-8911-74A98C4EEE25</key>
-		<dict>
-			<key>from</key>
-			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
-			<key>to</key>
-			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
-		</dict>
-		<key>D26A72AD-CD88-48B4-A53D-49A7E542AB6C</key>
+		<key>C8552EED-E6E0-4445-923B-FA887E5C13B9</key>
 		<dict>
 			<key>from</key>
 			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
 			<key>to</key>
 			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
 		</dict>
-		<key>F9FEC88D-D4ED-48F6-B4C2-C11743E36FF0</key>
+		<key>C93BA8EC-21D6-4EA2-BC04-4EF655B44A70</key>
 		<dict>
 			<key>from</key>
 			<string>37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9 - 37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9</string>

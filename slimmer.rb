@@ -72,21 +72,40 @@ $LOG.info '---------------------------------------------------------------'
 $LOG.info 'STARTING SLIM'
 
 # Handle input from automator
+
+# For debugging
+if ARGV.empty?
+  ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+end
+
+
 input = []
-ARGF.each do |f|
+ARGV.each do |f|
   input << f
 end
 
 $LOG.debug 'input: ' + input.join(' | ')
 
 # Automator sometimes adds a little extra space in path. Clean it up.
-input = input.map { |path| path.strip }
+# Also convert input to UTF-8
+input = input.map do |path|
+  path.strip
+  path.encode('utf-8', 'iso-8859-1')  # from iso-8859-1 to utf-8   # Needs Ruby 2.0
+end
 
 # Last item is the site directory. The rest is stuff that should be protected from being slimmed away.
 Site = Pathname.new(input.pop)
 $LOG.debug "Site: #{Site}"
 Source  = Site + 'source'
 $LOG.debug "Source: #{Source}"
+
+# Logging files protected by Automator
+if input.empty?
+  $LOG.info "No files protected by Automator"
+else
+  input.each {|path| $LOG.info "Protected by Automator: #{path}" }
+  $LOG.info "#{input.count} files protected by Automator"
+end
 
 # Removing some unneeded stuff from input
 input.uniq!       # Removing any duplicates
@@ -201,5 +220,7 @@ end
 #     A 'lock'-file is created, to avoid slimming the site twice by mistake
 FileUtils.touch (WARNING).to_s
 FileUtils.rm remove_candidates
-$LOG.info 'Removed files: ' + remove_candidates.join(' | ')
+$LOG.debug 'Removed files: ' + remove_candidates.join(' | ')
+$LOG.info "Removed #{remove_candidates.count} files"
+
 

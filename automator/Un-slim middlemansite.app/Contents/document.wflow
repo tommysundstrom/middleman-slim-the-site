@@ -109,7 +109,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>599.250000:537.500000</string>
+				<string>311.250000:547.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -167,7 +167,7 @@
 					<key>COMMAND_STRING</key>
 					<string># encoding: UTF-8
 
-# This is a companion script to slim.rb. It will put back the files that was removed (without overwriting changes
+# This is a companion script to slimmer.rb. It will put back the files that was removed (without overwriting changes
 # that has been made).
 
 require 'pathname'
@@ -175,7 +175,7 @@ require 'fileutils'
 require 'logger'
 
 # Setup logging
-logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/unslimmer.log')
+logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/slimmer.log')
 FileUtils.mkdir_p(File.dirname(logpath))
 $LOG = Logger.new(logpath, 'daily')
 $LOG.level = Logger::INFO
@@ -217,17 +217,24 @@ end
 
 # Move the files back – unless there already is a file at that location (existing file are
 # assumed to be the same or a newer version)
+brought_back = 0
+trashed = 0
 bring_back.each do |local_path|
   if (Source + local_path).exist?
     # There is already a (identical or newer) file there. Throw this one away.
     FileUtils.rm((Archive + local_path).to_s)
-    $LOG.info "#{local_path} already exist."
+    $LOG.debug "#{local_path} already exist."
+    trashed += 1
   else
     # Move it
     FileUtils.mv((Archive + local_path).to_s, (Source + local_path).to_s)
     $LOG.debug "Bringing back: #{local_path}"
+    brought_back += 1
   end
 end
+$LOG.info "#{brought_back + trashed} files handled"
+$LOG.info "#{trashed} files was already in place"
+$LOG.info "Moved back #{brought_back} files"
 
 # Remove the archive directory
 raise "There are still files here" unless (Dir.glob('**/*').select { |fd| File.file?(fd) }).empty?
@@ -350,19 +357,19 @@ $LOG.debug "Removed the warning"
 					</dict>
 				</dict>
 				<key>isViewVisible</key>
-				<false/>
+				<true/>
 				<key>location</key>
-				<string>599.250000:299.500000</string>
+				<string>311.250000:309.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<false/>
+			<true/>
 		</dict>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>70A06B4C-4389-4277-900A-F44FA6D25929</key>
+		<key>992612F1-0E08-498B-AA47-DED0FDBB0D2A</key>
 		<dict>
 			<key>from</key>
 			<string>B30F1881-43E1-471A-82C7-3592157271D5 - B30F1881-43E1-471A-82C7-3592157271D5</string>
