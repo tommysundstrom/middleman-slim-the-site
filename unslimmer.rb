@@ -19,6 +19,7 @@ $LOG.info 'STARTING UN-SLIM'
 
 if ARGV.empty?
   ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+  $LOG.warn "No path(s) provided to the script. Using debug path #{ARGV[0]}"
 end
 
 input = []
@@ -53,7 +54,9 @@ bring_back = Dir.glob('**/*').select { |fd| File.file?(fd) }    # All files
 # If they are not it may be a sign that I've reorganized the site or something like that, and in that case I want
 # a warning now, before starting to move things back to their old places. Thus, no mkdir here.)
 bring_back.each do |local_path|
-  raise "Directory #{(Source + local_path).dirname} does not seam to exist (needed by #{local_path}" unless ((Source + local_path).dirname).exist?
+  errmsg = "Directory #{(Source + local_path).dirname} does not seam to exist (needed by #{local_path}"
+  $LOG.error errmsg
+  raise errmsg unless ((Source + local_path).dirname).exist?
 end
 
 # Move the files back – unless there already is a file at that location (existing file are
@@ -78,9 +81,13 @@ $LOG.info "#{trashed} files was already in place"
 $LOG.info "Moved back #{brought_back} files"
 
 # Remove the archive directory
-raise "There are still files here" unless (Dir.glob('**/*').select { |fd| File.file?(fd) }).empty?
+unless (Dir.glob('**/*').select { |fd| File.file?(fd) }).empty?     # If there still are files
+  errmsg = "There are still files in #{Archive.to_s}"
+  $LOG.warn errmsg
+  raise errmsg
+end
 FileUtils.rm_r(Archive.to_s)
-$LOG.debug "Removed the empty #{Archive.to_s}"
+
 
 # Remove lock
 FileUtils.rm (Source + WARNING).to_s

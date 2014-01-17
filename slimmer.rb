@@ -76,6 +76,7 @@ $LOG.info 'STARTING SLIM'
 # For debugging
 if ARGV.empty?
   ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+  $LOG.warn "No path(s) provided to the script. Using debug path #{ARGV[0]}"
 end
 
 

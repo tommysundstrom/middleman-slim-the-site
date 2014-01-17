@@ -759,7 +759,7 @@ logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/slimmer.log')
 FileUtils.mkdir_p(File.dirname(logpath))
 $LOG = Logger.new(logpath, 'daily')
 $LOG.level = Logger::INFO
-$LOG.info '---------------------------------------------------------------'
+$LOG.info '==============================================================='
 $LOG.info 'STARTING SLIM'
 
 # Handle input from automator
@@ -767,6 +767,7 @@ $LOG.info 'STARTING SLIM'
 # For debugging
 if ARGV.empty?
   ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+  $LOG.warn "No path(s) provided to the script. Using debug path #{ARGV[0]}"
 end
 
 
@@ -839,7 +840,10 @@ WARNING = Source + '_WARNING - This site is slimmed for development.lock'   # Th
 FileUtils.cd(Source.to_s)
 
 # Check that the site is not already slimmed
-raise 'This site indicates that it is already in a slimmed state' if File.exist? WARNING
+if File.exist? WARNING
+  $LOG.warn 'This site indicates that it is already in a slimmed state'
+  raise     'This site indicates that it is already in a slimmed state'
+end
 
 # Make a complete copy of source
 FileUtils.copy_entry(Source, Archive)
@@ -1038,40 +1042,40 @@ $LOG.info "Removed #{remove_candidates.count} files"
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2D4AE4D0-5DD9-46D7-A1EE-1621B1A50F8C</key>
+		<key>24F48904-E5F0-4BD8-8371-8BE6427B415F</key>
 		<dict>
 			<key>from</key>
-			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
-			<key>to</key>
 			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+			<key>to</key>
+			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
 		</dict>
-		<key>403680FD-4DEE-4113-9161-B625DC75E7A0</key>
+		<key>41943866-32AB-4A2A-8BDA-70498812D4FA</key>
 		<dict>
 			<key>from</key>
 			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
 			<key>to</key>
 			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
 		</dict>
-		<key>A28B0EE3-1361-4CE1-9132-AE8D8DACF3C7</key>
-		<dict>
-			<key>from</key>
-			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
-			<key>to</key>
-			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
-		</dict>
-		<key>ED375DBD-8B1F-436A-A795-8C9B6FC71642</key>
+		<key>44612FE9-4949-44F9-BCC1-7E4CDED29982</key>
 		<dict>
 			<key>from</key>
 			<string>37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9 - 37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9</string>
 			<key>to</key>
 			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
 		</dict>
-		<key>F7068555-D66C-4B8C-874B-44CF0E744731</key>
+		<key>7B6EE272-B593-4519-BC45-E433399DCFCA</key>
 		<dict>
 			<key>from</key>
-			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
-			<key>to</key>
 			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
+			<key>to</key>
+			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
+		</dict>
+		<key>E0349BA6-0808-490C-9FB3-06B4FB044A58</key>
+		<dict>
+			<key>from</key>
+			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
+			<key>to</key>
+			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
 		</dict>
 	</dict>
 	<key>variables</key>
