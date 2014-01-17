@@ -68,7 +68,7 @@ logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/slimmer.log')
 FileUtils.mkdir_p(File.dirname(logpath))
 $LOG = Logger.new(logpath, 'daily')
 $LOG.level = Logger::INFO
-$LOG.info '---------------------------------------------------------------'
+$LOG.info '==============================================================='
 $LOG.info 'STARTING SLIM'
 
 # Handle input from automator
@@ -148,7 +148,10 @@ WARNING = Source + '_WARNING - This site is slimmed for development.lock'   # Th
 FileUtils.cd(Source.to_s)
 
 # Check that the site is not already slimmed
-raise 'This site indicates that it is already in a slimmed state' if File.exist? WARNING
+if File.exist? WARNING
+  $LOG.warn 'This site indicates that it is already in a slimmed state'
+  raise     'This site indicates that it is already in a slimmed state'
+end
 
 # Make a complete copy of source
 FileUtils.copy_entry(Source, Archive)

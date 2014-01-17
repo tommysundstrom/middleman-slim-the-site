@@ -109,7 +109,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>311.250000:547.000000</string>
+				<string>309.500000:554.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -183,8 +183,13 @@ $LOG.info '---------------------------------------------------------------'
 $LOG.info 'STARTING UN-SLIM'
 
 # Handle input from automator
+
+if ARGV.empty?
+  ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+end
+
 input = []
-ARGF.each do |f|
+ARGV.each do |f|
   input &lt;&lt; f
 end
 
@@ -201,7 +206,10 @@ WARNING = Source + '_WARNING - This site is slimmed for development.lock'   # Th
 
 
 # Check that there is anything to put back
-raise 'Can not find a copy of the original site source. (Maybe the site is not slimmed?)' unless Archive.exist?
+unless Archive.exist?
+  $LOG.warn "Can not find a copy of the original site source. (Maybe the site is not slimmed?)"
+  raise     'Can not find a copy of the original site source. (Maybe the site is not slimmed?)'
+end
 
 # Put it back
 
@@ -232,7 +240,7 @@ bring_back.each do |local_path|
     brought_back += 1
   end
 end
-$LOG.info "#{brought_back + trashed} files handled"
+$LOG.info "#{brought_back + trashed} files in unslimmed copy of source"
 $LOG.info "#{trashed} files was already in place"
 $LOG.info "Moved back #{brought_back} files"
 
@@ -250,7 +258,7 @@ $LOG.debug "Removed the warning"
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>shell</key>
 					<string>/usr/bin/ruby</string>
 					<key>source</key>
@@ -359,7 +367,7 @@ $LOG.debug "Removed the warning"
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>311.250000:309.000000</string>
+				<string>309.500000:316.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -369,7 +377,7 @@ $LOG.debug "Removed the warning"
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>992612F1-0E08-498B-AA47-DED0FDBB0D2A</key>
+		<key>1A339A8B-3BFB-4709-B07F-6AD9001F6361</key>
 		<dict>
 			<key>from</key>
 			<string>B30F1881-43E1-471A-82C7-3592157271D5 - B30F1881-43E1-471A-82C7-3592157271D5</string>

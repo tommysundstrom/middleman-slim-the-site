@@ -16,8 +16,13 @@ $LOG.info '---------------------------------------------------------------'
 $LOG.info 'STARTING UN-SLIM'
 
 # Handle input from automator
+
+if ARGV.empty?
+  ARGV = ['/Users/Tommy/Sites/Middleman/anvandbart.se']
+end
+
 input = []
-ARGF.each do |f|
+ARGV.each do |f|
   input << f
 end
 
@@ -34,7 +39,10 @@ WARNING = Source + '_WARNING - This site is slimmed for development.lock'   # Th
 
 
 # Check that there is anything to put back
-raise 'Can not find a copy of the original site source. (Maybe the site is not slimmed?)' unless Archive.exist?
+unless Archive.exist?
+  $LOG.warn "Can not find a copy of the original site source. (Maybe the site is not slimmed?)"
+  raise     'Can not find a copy of the original site source. (Maybe the site is not slimmed?)'
+end
 
 # Put it back
 
@@ -65,7 +73,7 @@ bring_back.each do |local_path|
     brought_back += 1
   end
 end
-$LOG.info "#{brought_back + trashed} files handled"
+$LOG.info "#{brought_back + trashed} files in unslimmed copy of source"
 $LOG.info "#{trashed} files was already in place"
 $LOG.info "Moved back #{brought_back} files"
 

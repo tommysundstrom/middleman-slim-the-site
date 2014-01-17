@@ -107,14 +107,14 @@
 					</dict>
 				</dict>
 				<key>isViewVisible</key>
-				<true/>
+				<false/>
 				<key>location</key>
-				<string>311.250000:988.000000</string>
+				<string>309.500000:792.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>action</key>
@@ -219,7 +219,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>311.250000:750.000000</string>
+				<string>309.500000:750.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -419,7 +419,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>311.250000:708.000000</string>
+				<string>309.500000:708.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Find Finder Items 2.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -521,7 +521,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>311.250000:483.000000</string>
+				<string>309.500000:483.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -633,7 +633,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>311.250000:245.000000</string>
+				<string>309.500000:245.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -919,7 +919,7 @@ $LOG.info "Removed #{remove_candidates.count} files"
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>shell</key>
 					<string>/usr/bin/ruby</string>
 					<key>source</key>
@@ -1028,7 +1028,7 @@ $LOG.info "Removed #{remove_candidates.count} files"
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>311.250000:203.000000</string>
+				<string>309.500000:203.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -1038,40 +1038,40 @@ $LOG.info "Removed #{remove_candidates.count} files"
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>58110BE5-B521-4F95-AFE4-570E199745C0</key>
+		<key>2D4AE4D0-5DD9-46D7-A1EE-1621B1A50F8C</key>
 		<dict>
 			<key>from</key>
 			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
 			<key>to</key>
 			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
 		</dict>
-		<key>6522555B-7B22-4C24-BBDF-F689702662FB</key>
-		<dict>
-			<key>from</key>
-			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
-			<key>to</key>
-			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
-		</dict>
-		<key>7FDAE4C9-05D5-4934-9E1A-A4251D6F2B7E</key>
+		<key>403680FD-4DEE-4113-9161-B625DC75E7A0</key>
 		<dict>
 			<key>from</key>
 			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
 			<key>to</key>
 			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
 		</dict>
-		<key>C8552EED-E6E0-4445-923B-FA887E5C13B9</key>
+		<key>A28B0EE3-1361-4CE1-9132-AE8D8DACF3C7</key>
 		<dict>
 			<key>from</key>
 			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
 			<key>to</key>
 			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
 		</dict>
-		<key>C93BA8EC-21D6-4EA2-BC04-4EF655B44A70</key>
+		<key>ED375DBD-8B1F-436A-A795-8C9B6FC71642</key>
 		<dict>
 			<key>from</key>
 			<string>37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9 - 37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9</string>
 			<key>to</key>
 			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
+		</dict>
+		<key>F7068555-D66C-4B8C-874B-44CF0E744731</key>
+		<dict>
+			<key>from</key>
+			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+			<key>to</key>
+			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
 		</dict>
 	</dict>
 	<key>variables</key>
