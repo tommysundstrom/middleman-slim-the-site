@@ -81,3 +81,8 @@ to manually set files and directories that should be protected.
 
 Note that everything you need from this repository is the two Automator files. The script files are copies of
  the Ruby scripts inside the Automator files, so you just need them if you want to modify the functionality.
+
+
+### Git
+If you commit the site when it's slimmed down, Git will want to note the removed files. Exclude them from
+commit, or un-slim the site before committing.
