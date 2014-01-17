@@ -86,3 +86,6 @@ Note that everything you need from this repository is the two Automator files. T
 ### Git
 If you commit the site when it's slimmed down, Git will want to note the removed files. Exclude them from
 commit, or un-slim the site before committing.
+
+### Log
+There is a log at ~/Library/Logs/Middleman/Slimmer
