@@ -50,13 +50,16 @@ end
 FileUtils.cd(Archive.to_s)
 bring_back = Dir.glob('**/*').select { |fd| File.file?(fd) }    # All files
 
-# Check that all directories are in place. (Since I did not remove any directories during slimming, they should be.
+# Check that all directories are in place.
+# (Since I did not remove any directories during slimming, they should be.
 # If they are not it may be a sign that I've reorganized the site or something like that, and in that case I want
 # a warning now, before starting to move things back to their old places. Thus, no mkdir here.)
 bring_back.each do |local_path|
-  errmsg = "Directory #{(Source + local_path).dirname} does not seam to exist (needed by #{local_path}"
-  $LOG.error errmsg
-  raise errmsg unless ((Source + local_path).dirname).exist?
+  unless ((Source + local_path).dirname).exist?
+    errmsg = "Directory #{(Source + local_path).dirname} does not seam to exist (needed by #{local_path}"
+    $LOG.error errmsg
+    raise errmsg
+  end
 end
 
 # Move the files back – unless there already is a file at that location (existing file are
