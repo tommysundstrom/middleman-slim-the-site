@@ -109,7 +109,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:554.000000</string>
+				<string>309.500000:675.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -377,9 +377,158 @@ $LOG.debug "Removed the warning"
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:316.000000</string>
+				<string>309.500000:437.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string></string>
+				<key>AMApplication</key>
+				<array>
+					<string>System</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>tSubtitle</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Middleman Slim the site</string>
+						</array>
+					</dict>
+					<key>tText</key>
+					<dict/>
+					<key>tTitle</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Site unslimmed</string>
+						</array>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/Users/Tommy/Library/Automator/Display Notification Center Alert.action</string>
+				<key>ActionName</key>
+				<string>Display Notification Center Alert</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>tSubtitle</key>
+					<string>Middleman Slim the site</string>
+					<key>tText</key>
+					<string></string>
+					<key>tTitle</key>
+					<string>Site unslimmed</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.automatedworkflows.product.automator.Display-Notification-Center-Alert</string>
+				<key>CFBundleVersion</key>
+				<string></string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Display_Notification_Center_Alert</string>
+				<key>InputUUID</key>
+				<string>37776341-D1F7-4096-9E48-79CA49D78895</string>
+				<key>Keywords</key>
+				<array>
+					<string>Automated Workflows, LLC</string>
+					<string>notifications</string>
+					<string>alerts</string>
+					<string>messages</string>
+					<string>dialogs</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>2D01DC45-0080-4E67-A55B-A0910A40C3C7</string>
+				<key>UUID</key>
+				<string>E486A3B2-D037-44ED-8F8C-B3203718BE8F</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>System</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>tSubtitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>tTitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>tText</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>309.500000:254.000000</string>
+				<key>nibPath</key>
+				<string>/Users/Tommy/Library/Automator/Display Notification Center Alert.action/Contents/Resources/en.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -387,7 +536,14 @@ $LOG.debug "Removed the warning"
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>F2E93C37-562D-449D-826D-028782F2AF34</key>
+		<key>1AE4AD35-039E-4CFE-B801-38DF638001DD</key>
+		<dict>
+			<key>from</key>
+			<string>5F1E6CA0-F6A6-444C-A73D-666A131705D8 - 5F1E6CA0-F6A6-444C-A73D-666A131705D8</string>
+			<key>to</key>
+			<string>E486A3B2-D037-44ED-8F8C-B3203718BE8F - E486A3B2-D037-44ED-8F8C-B3203718BE8F</string>
+		</dict>
+		<key>30D3C741-A868-4B2D-B1EE-CE34F5DC526B</key>
 		<dict>
 			<key>from</key>
 			<string>B30F1881-43E1-471A-82C7-3592157271D5 - B30F1881-43E1-471A-82C7-3592157271D5</string>

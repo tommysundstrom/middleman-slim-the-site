@@ -66,7 +66,7 @@ require 'logger'
 # Setup logging
 logpath = File.expand_path('~/Library/Logs/Middleman/Slimmer/slimmer.log')
 FileUtils.mkdir_p(File.dirname(logpath))
-$LOG = Logger.new(logpath, 'daily')
+$LOG = Logger.new(logpath, 'monthly')
 $LOG.level = Logger::INFO
 $LOG.info '==============================================================='
 $LOG.info 'STARTING SLIM'

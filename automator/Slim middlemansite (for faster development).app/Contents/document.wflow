@@ -109,7 +109,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>309.500000:792.000000</string>
+				<string>309.500000:1026.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -219,7 +219,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>309.500000:750.000000</string>
+				<string>309.500000:984.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Set Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -419,7 +419,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:708.000000</string>
+				<string>309.500000:942.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Find Finder Items 2.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -521,7 +521,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:483.000000</string>
+				<string>309.500000:717.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -633,7 +633,7 @@
 				<key>isViewVisible</key>
 				<false/>
 				<key>location</key>
-				<string>309.500000:245.000000</string>
+				<string>309.500000:479.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -1032,9 +1032,161 @@ $LOG.info "Removed #{remove_candidates.count} files"
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.500000:203.000000</string>
+				<string>309.500000:437.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string></string>
+				<key>AMApplication</key>
+				<array>
+					<string>System</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>tSubtitle</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Middleman Slim the site</string>
+						</array>
+					</dict>
+					<key>tText</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array/>
+					</dict>
+					<key>tTitle</key>
+					<dict>
+						<key>tokenizedValue</key>
+						<array>
+							<string>Site slimmed down</string>
+						</array>
+					</dict>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>*</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/Users/Tommy/Library/Automator/Display Notification Center Alert.action</string>
+				<key>ActionName</key>
+				<string>Display Notification Center Alert</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>tSubtitle</key>
+					<string>Middleman Slim the site</string>
+					<key>tText</key>
+					<string></string>
+					<key>tTitle</key>
+					<string>Site slimmed down</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.automatedworkflows.product.automator.Display-Notification-Center-Alert</string>
+				<key>CFBundleVersion</key>
+				<string></string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>Display_Notification_Center_Alert</string>
+				<key>InputUUID</key>
+				<string>39F2BF39-D05B-4995-A368-F2975E532236</string>
+				<key>Keywords</key>
+				<array>
+					<string>Automated Workflows, LLC</string>
+					<string>notifications</string>
+					<string>alerts</string>
+					<string>messages</string>
+					<string>dialogs</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>640A955F-5A50-4E74-A70B-9A3DBEF6332D</string>
+				<key>UUID</key>
+				<string>47EFB3B5-B784-48F7-A785-416C61AE4688</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>System</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>tSubtitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>tTitle</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>tText</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>309.500000:254.000000</string>
+				<key>nibPath</key>
+				<string>/Users/Tommy/Library/Automator/Display Notification Center Alert.action/Contents/Resources/en.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -1042,40 +1194,47 @@ $LOG.info "Removed #{remove_candidates.count} files"
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>24F48904-E5F0-4BD8-8371-8BE6427B415F</key>
+		<key>0E2352C2-CD7B-409E-9B19-8F5CDA574893</key>
+		<dict>
+			<key>from</key>
+			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
+			<key>to</key>
+			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
+		</dict>
+		<key>3875EAA7-2FFD-4DFA-B09A-42550111D671</key>
 		<dict>
 			<key>from</key>
 			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
 			<key>to</key>
 			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
 		</dict>
-		<key>41943866-32AB-4A2A-8BDA-70498812D4FA</key>
-		<dict>
-			<key>from</key>
-			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
-			<key>to</key>
-			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
-		</dict>
-		<key>44612FE9-4949-44F9-BCC1-7E4CDED29982</key>
+		<key>3FC5A39B-ADBC-46AF-B6D2-D9CF555FEB9E</key>
 		<dict>
 			<key>from</key>
 			<string>37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9 - 37BA3AC9-CAE9-4DA3-B1AF-E0782EDD6BE9</string>
 			<key>to</key>
 			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
 		</dict>
-		<key>7B6EE272-B593-4519-BC45-E433399DCFCA</key>
+		<key>506836EA-5949-46B4-A421-03AC7569B752</key>
+		<dict>
+			<key>from</key>
+			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
+			<key>to</key>
+			<string>47EFB3B5-B784-48F7-A785-416C61AE4688 - 47EFB3B5-B784-48F7-A785-416C61AE4688</string>
+		</dict>
+		<key>5B6E5E06-A61C-4AFC-8A45-3EC87461B64F</key>
+		<dict>
+			<key>from</key>
+			<string>395112E0-CA3D-4DB2-B9EF-362CD585C64D - 395112E0-CA3D-4DB2-B9EF-362CD585C64D</string>
+			<key>to</key>
+			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
+		</dict>
+		<key>D7F5B3C4-3125-44F5-9CAB-2B930D878346</key>
 		<dict>
 			<key>from</key>
 			<string>7780D41E-D731-4FCB-9970-A6D01E8F0639 - 7780D41E-D731-4FCB-9970-A6D01E8F0639</string>
 			<key>to</key>
 			<string>C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2 - C98EECB4-AFEA-4C0B-99E3-AA69C1941EA2</string>
-		</dict>
-		<key>E0349BA6-0808-490C-9FB3-06B4FB044A58</key>
-		<dict>
-			<key>from</key>
-			<string>CF5D4092-B6C2-4839-A905-370080922E35 - CF5D4092-B6C2-4839-A905-370080922E35</string>
-			<key>to</key>
-			<string>10539F85-C37C-4A2F-ACC2-7819789A10D5 - 10539F85-C37C-4A2F-ACC2-7819789A10D5</string>
 		</dict>
 	</dict>
 	<key>variables</key>
